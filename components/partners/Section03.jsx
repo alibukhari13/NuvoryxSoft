@@ -131,8 +131,7 @@ export default function Section03() {
                   enableBackground="new 0 0 132.5 20"
                   version="1.1"
                   viewBox="0 0 130.3 19.25"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
+                    xmlns="http://www.w3.org/2000/svg"
                 >
                   <title>ServiceNow logo</title>
                   <desc>

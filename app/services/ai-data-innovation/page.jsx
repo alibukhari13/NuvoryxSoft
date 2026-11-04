@@ -4,9 +4,5 @@ import Page from "@/pages/services/ai-data-innovation/page";
 export const metadata = { title: "Ai Data Innovation · Nuvoryx" };
 
 export default function RoutePage() {
-  return (
-    <PageShell>
-      <Page />
-    </PageShell>
-  );
+  return <PageShell><Page /></PageShell>;
 }

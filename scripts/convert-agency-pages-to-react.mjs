@@ -134,7 +134,7 @@ function styleToJs(value) {
 
 function convertAttribute(name, value, tag) {
   const lower = name.toLowerCase();
-  if (["xmlns:cc", "xmlns:dc", "xmlns:rdf"].includes(lower)) return "";
+  if (name.includes(":")) return "";
   if (lower.startsWith("on")) return "";
   const jsxName = attributeNames[lower] || name;
   if (lower === "style") return `style=${styleToJs(value)}`;
@@ -252,9 +252,13 @@ function writeRoute(route, entry, createAppPage = true) {
   const routeName = safeName(route);
   const routeDirectory = path.join(componentsRoot, ...routeName.split("/"));
   const pageDirectory = path.join(pagesRoot, ...routeName.split("/"));
-  fs.rmSync(routeDirectory, { recursive: true, force: true });
   fs.mkdirSync(routeDirectory, { recursive: true });
   fs.mkdirSync(pageDirectory, { recursive: true });
+  for (const file of fs.readdirSync(routeDirectory)) {
+    if (/^Section\d+\.jsx$/.test(file)) {
+      fs.rmSync(path.join(routeDirectory, file), { force: true });
+    }
+  }
   const pageData = JSON.parse(
     fs.readFileSync(path.join(sourceDirectory, entry.file), "utf8"),
   );
@@ -309,9 +313,22 @@ function pascal(value) {
     .join("");
 }
 
+const onlyRoutes = new Set(
+  (process.env.ONLY_ROUTES || "")
+    .split(",")
+    .map((route) => route.trim())
+    .filter(Boolean),
+);
+
 for (const [route, entry] of Object.entries(manifest)) {
   if (route.includes("?")) continue;
+  if (onlyRoutes.size && !onlyRoutes.has(route)) continue;
   writeRoute(route, entry);
+}
+
+if (onlyRoutes.size) {
+  console.log(`Regenerated ${onlyRoutes.size} selected routes.`);
+  process.exit(0);
 }
 
 const logosEntry = manifest["testimonials?logos=1"];
