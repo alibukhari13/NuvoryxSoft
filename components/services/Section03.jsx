@@ -2,7 +2,7 @@ export default function Section03() {
   return (
     <section className="bg-paper text-ink py-20 md:py-28 lg:py-32 relative">
       <div className="mx-auto w-full max-w-[1280px] px-5 md:px-8">
-        <div className="sticky top-[72px] z-20 -mx-5 mb-10 bg-paper/90 px-5 py-4 backdrop-blur md:-mx-8 md:px-8">
+        <div className="relative z-20 -mx-5 mb-10 bg-paper px-5 py-4 md:-mx-8 md:px-8">
           <div
             role="tablist"
             className="no-scrollbar relative flex gap-2 overflow-x-auto"
