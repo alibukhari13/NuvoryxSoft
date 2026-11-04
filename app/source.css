@@ -1704,4 +1704,39 @@
     font-weight: 700;
     line-height: 1.05;
   }
+
+  /* Process cards are narrow in a 5-column row. Keep the duration
+     ("1–2 weeks") on one line, clear of the title, and stretch every
+     card to the same height. */
+  .md\:grid-cols-5 > button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .md\:grid-cols-5 > button > div.mt-6 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+
+  .md\:grid-cols-5 > button > div.mt-6 > div.flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .md\:grid-cols-5 > button > div.mt-6 > div.flex > h3 svg {
+    flex-shrink: 0;
+  }
+
+  .md\:grid-cols-5 > button > div.mt-6 > div.flex > span.font-mono {
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+
+  .md\:grid-cols-5 > button > div.mt-6 > p {
+    margin-top: 16px;
+    line-height: 1.55;
+  }
 }
