@@ -1,0 +1,22 @@
+{
+  "name": "nuvoryx-nextjs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "import:agency-pages": "node scripts/import-agency-pages.mjs && node scripts/convert-agency-pages-to-react.mjs && node scripts/generate-extra-pages.mjs && prettier --write \"app/**/*.jsx\" \"pages/**/*.jsx\" \"components/**/*.jsx\" && node -e \"require('node:fs').rmSync('.agency-import', { recursive: true, force: true })\""
+  },
+  "dependencies": {
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "cheerio": "^1.2.0",
+    "prettier": "^3.9.9",
+    "tailwindcss": "^4.1.0"
+  }
+}

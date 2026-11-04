@@ -1,0 +1,199 @@
+export default function Section06() {
+  return (
+    <section className="bg-white text-ink py-16 md:py-20 relative">
+      <div className="mx-auto w-full max-w-[1280px] px-5 md:px-8">
+        <div className="mb-12 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-3xl">
+            <div className="reveal in" style={{ transitionDelay: "0ms" }}>
+              <span className="inline-flex items-center gap-2 font-mono text-[11.5px] font-medium uppercase tracking-[0.18em] text-muted">
+                <span
+                  className="h-1.5 w-1.5 rounded-full bg-brand"
+                  aria-hidden="true"
+                ></span>
+                Tools &amp; technology
+              </span>
+            </div>
+            <div className="reveal in" style={{ transitionDelay: "80ms" }}>
+              <h2 className="mt-4 text-[34px] sm:text-[44px] lg:text-[52px]">
+                Built with best-in-class tools.
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-3">
+          <span
+            className="group/chip flex items-center gap-3 whitespace-nowrap rounded-[18px] border px-5 py-3.5 text-[15.5px] font-bold transition-[border-color,box-shadow] duration-300 border-line bg-white text-ink shadow-soft hover:border-brand/50 hover:shadow-lift"
+            style={{ "--brand-c": "#05CF45" }}
+          >
+            <span className="flex h-7 min-w-7 items-center justify-center">
+              <span
+                role="img"
+                aria-label="OpenAI"
+                className="inline-flex shrink-0 items-center justify-center [&amp;>svg]:h-full [&amp;>svg]:w-full h-[26px] w-[28px] transition-[color,filter] duration-300 text-ink group-hover/chip:text-[var(--brand-c)] group-hover/chip:[filter:none]"
+                style={{ filter: "brightness(0)" }}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 260">
+                  <path d="M239.184 106.203a64.72 64.72 0 0 0-5.576-53.103C219.452 28.459 191 15.784 163.213 21.74A65.586 65.586 0 0 0 52.096 45.22a64.72 64.72 0 0 0-43.23 31.36c-14.31 24.602-11.061 55.634 8.033 76.74a64.67 64.67 0 0 0 5.525 53.102c14.174 24.65 42.644 37.324 70.446 31.36a64.72 64.72 0 0 0 48.754 21.744c28.481.025 53.714-18.361 62.414-45.481a64.77 64.77 0 0 0 43.229-31.36c14.137-24.558 10.875-55.423-8.083-76.483m-97.56 136.338a48.4 48.4 0 0 1-31.105-11.255l1.535-.87l51.67-29.825a8.6 8.6 0 0 0 4.247-7.367v-72.85l21.845 12.636c.218.111.37.32.409.563v60.367c-.056 26.818-21.783 48.545-48.601 48.601M37.158 197.93a48.35 48.35 0 0 1-5.781-32.589l1.534.921l51.722 29.826a8.34 8.34 0 0 0 8.441 0l63.181-36.425v25.221a.87.87 0 0 1-.358.665l-52.335 30.184c-23.257 13.398-52.97 5.431-66.404-17.803M23.549 85.38a48.5 48.5 0 0 1 25.58-21.333v61.39a8.29 8.29 0 0 0 4.195 7.316l62.874 36.272l-21.845 12.636a.82.82 0 0 1-.767 0L41.353 151.53c-23.211-13.454-31.171-43.144-17.804-66.405zm179.466 41.695l-63.08-36.63L161.73 77.86a.82.82 0 0 1 .768 0l52.233 30.184a48.6 48.6 0 0 1-7.316 87.635v-61.391a8.54 8.54 0 0 0-4.4-7.213m21.742-32.69l-1.535-.922l-51.619-30.081a8.39 8.39 0 0 0-8.492 0L99.98 99.808V74.587a.72.72 0 0 1 .307-.665l52.233-30.133a48.652 48.652 0 0 1 72.236 50.391zM88.061 139.097l-21.845-12.585a.87.87 0 0 1-.41-.614V65.685a48.652 48.652 0 0 1 79.757-37.346l-1.535.87l-51.67 29.825a8.6 8.6 0 0 0-4.246 7.367zm11.868-25.58L128.067 97.3l28.188 16.218v32.434l-28.086 16.218l-28.188-16.218z"></path>
+                </svg>
+              </span>
+            </span>
+            OpenAI
+          </span>
+          <span
+            className="group/chip flex items-center gap-3 whitespace-nowrap rounded-[18px] border px-5 py-3.5 text-[15.5px] font-bold transition-[border-color,box-shadow] duration-300 border-line bg-white text-ink shadow-soft hover:border-brand/50 hover:shadow-lift"
+            style={{ "--brand-c": "#05CF45" }}
+          >
+            <span className="flex h-7 min-w-7 items-center justify-center">
+              <svg
+                viewBox="0 0 24 24"
+                role="img"
+                aria-label="Anthropic"
+                className="aspect-square shrink-0 h-[26px] w-[28px] transition-[color,filter] duration-300 text-ink group-hover/chip:text-[var(--brand-c)] group-hover/chip:[filter:none]"
+                fill="currentColor"
+              >
+                <path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"></path>
+              </svg>
+            </span>
+            Anthropic
+          </span>
+          <span
+            className="group/chip flex items-center gap-3 whitespace-nowrap rounded-[18px] border px-5 py-3.5 text-[15.5px] font-bold transition-[border-color,box-shadow] duration-300 border-line bg-white text-ink shadow-soft hover:border-brand/50 hover:shadow-lift"
+            style={{ "--brand-c": "#7FC8FF" }}
+          >
+            <span className="flex h-7 min-w-7 items-center justify-center">
+              <svg
+                viewBox="0 0 24 24"
+                role="img"
+                aria-label="LangChain"
+                className="aspect-square shrink-0 h-[26px] w-[28px] transition-[color,filter] duration-300 text-ink group-hover/chip:text-[var(--brand-c)] group-hover/chip:[filter:none]"
+                fill="currentColor"
+              >
+                <path d="M13.796 0a6.93 6.93 0 0 0-4.91 2.019L5.451 5.455l3.273 3.27 3.432-3.432a2.284 2.284 0 0 1 3.277 0 2.28 2.28 0 0 1 0 3.275L12 12.001l3.273 3.273 3.433-3.435c2.692-2.692 2.692-7.127 0-9.82A6.92 6.92 0 0 0 13.796 0m-5.07 8.728-3.433 3.434c-2.692 2.693-2.692 7.126 0 9.819A6.92 6.92 0 0 0 10.203 24a6.93 6.93 0 0 0 4.911-2.02l3.432-3.432-3.271-3.272-3.433 3.433a2.284 2.284 0 0 1-3.277 0 2.28 2.28 0 0 1 0-3.276L12 12z"></path>
+              </svg>
+            </span>
+            LangChain
+          </span>
+          <span
+            className="group/chip flex items-center gap-3 whitespace-nowrap rounded-[18px] border px-5 py-3.5 text-[15.5px] font-bold transition-[border-color,box-shadow] duration-300 border-line bg-white text-ink shadow-soft hover:border-brand/50 hover:shadow-lift"
+            style={{ "--brand-c": "#EE4C2C" }}
+          >
+            <span className="flex h-7 min-w-7 items-center justify-center">
+              <svg
+                viewBox="0 0 24 24"
+                role="img"
+                aria-label="PyTorch"
+                className="aspect-square shrink-0 h-[26px] w-[28px] transition-[color,filter] duration-300 text-ink group-hover/chip:text-[var(--brand-c)] group-hover/chip:[filter:none]"
+                fill="currentColor"
+              >
+                <path d="M12.005 0L4.952 7.053a9.865 9.865 0 000 14.022 9.866 9.866 0 0014.022 0c3.984-3.9 3.986-10.205.085-14.023l-1.744 1.743c2.904 2.905 2.904 7.634 0 10.538s-7.634 2.904-10.538 0-2.904-7.634 0-10.538l4.647-4.646.582-.665zm3.568 3.899a1.327 1.327 0 00-1.327 1.327 1.327 1.327 0 001.327 1.328A1.327 1.327 0 0016.9 5.226 1.327 1.327 0 0015.573 3.9z"></path>
+              </svg>
+            </span>
+            PyTorch
+          </span>
+          <span
+            className="group/chip flex items-center gap-3 whitespace-nowrap rounded-[18px] border px-5 py-3.5 text-[15.5px] font-bold transition-[border-color,box-shadow] duration-300 border-line bg-white text-ink shadow-soft hover:border-brand/50 hover:shadow-lift"
+            style={{ "--brand-c": "#FF3621" }}
+          >
+            <span className="flex h-7 min-w-7 items-center justify-center">
+              <svg
+                viewBox="0 0 24 24"
+                role="img"
+                aria-label="Databricks"
+                className="aspect-square shrink-0 h-[26px] w-[28px] transition-[color,filter] duration-300 text-ink group-hover/chip:text-[var(--brand-c)] group-hover/chip:[filter:none]"
+                fill="currentColor"
+              >
+                <path d="M.95 14.184L12 20.403l9.919-5.55v2.21L12 22.662l-10.484-5.96-.565.308v.77L12 24l11.05-6.218v-4.317l-.515-.309L12 19.118l-9.867-5.653v-2.21L12 16.805l11.05-6.218V6.32l-.515-.308L12 11.974 2.647 6.681 12 1.388l7.76 4.368.668-.411v-.566L12 0 .95 6.27v.72L12 13.207l9.919-5.55v2.26L12 15.52 1.516 9.56l-.565.308Z"></path>
+              </svg>
+            </span>
+            Databricks
+          </span>
+          <span
+            className="group/chip flex items-center gap-3 whitespace-nowrap rounded-[18px] border px-5 py-3.5 text-[15.5px] font-bold transition-[border-color,box-shadow] duration-300 border-line bg-white text-ink shadow-soft hover:border-brand/50 hover:shadow-lift"
+            style={{ "--brand-c": "#29B5E8" }}
+          >
+            <span className="flex h-7 min-w-7 items-center justify-center">
+              <svg
+                viewBox="0 0 24 24"
+                role="img"
+                aria-label="Snowflake"
+                className="aspect-square shrink-0 h-[26px] w-[28px] transition-[color,filter] duration-300 text-ink group-hover/chip:text-[var(--brand-c)] group-hover/chip:[filter:none]"
+                fill="currentColor"
+              >
+                <path d="M24 3.459c0 .646-.418 1.18-1.141 1.18-.723 0-1.142-.534-1.142-1.18 0-.647.419-1.18 1.142-1.18.723 0 1.141.533 1.141 1.18zm-.228 0c0-.533-.38-.951-.913-.951s-.913.38-.913.95c0 .533.38.952.913.952.57 0 .913-.419.913-.951zm-1.37-.533h.495c.266 0 .456.152.456.38 0 .153-.076.229-.19.305l.19.266v.038h-.266l-.19-.266h-.229v.266h-.266zm.495.228h-.229v.267h.229c.114 0 .152-.038.152-.114.038-.077-.038-.153-.152-.153zM7.602 12.4c.038-.151.076-.304.076-.456 0-.114-.038-.228-.038-.342-.114-.343-.304-.647-.646-.838l-4.87-2.777c-.685-.38-1.56-.152-1.94.533-.381.685-.153 1.56.532 1.94l2.701 1.56-2.701 1.56c-.685.38-.913 1.256-.533 1.94.38.685 1.256.914 1.94.533l4.832-2.777c.343-.267.571-.533.647-.876zm1.332 2.626c-.266-.038-.57.038-.837.19l-4.832 2.777c-.685.38-.913 1.256-.532 1.94.38.686 1.255.914 1.94.533l2.701-1.56v3.12c0 .8.647 1.408 1.446 1.408.799 0 1.407-.647 1.407-1.408v-5.592c0-.761-.57-1.37-1.293-1.408zm4.946-6.088c.266.038.57-.038.837-.19l4.832-2.777c.685-.38.913-1.256.532-1.94-.38-.686-1.255-.914-1.94-.533l-2.701 1.56V1.975c0-.799-.647-1.408-1.446-1.408-.799 0-1.446.609-1.446 1.408V7.53c0 .76.609 1.37 1.332 1.407zM3.265 5.97l4.832 2.777c.266.152.533.19.837.19.723-.038 1.331-.684 1.331-1.407V1.975c0-.799-.646-1.408-1.407-1.408-.799 0-1.446.647-1.446 1.408v3.12l-2.701-1.56c-.685-.38-1.56-.152-1.94.533-.419.646-.19 1.521.494 1.902zm9.093 6.011a.412.412 0 00-.114-.266l-.57-.571a.346.346 0 00-.267-.114.412.412 0 00-.266.114l-.571.57a.411.411 0 00-.114.267c0 .076.038.19.114.267l.57.57a.345.345 0 00.267.114c.076 0 .19-.038.266-.114l.571-.57a.412.412 0 00.114-.267zm1.598.533L11.94 14.53c-.039.038-.153.114-.229.114h-.608a.411.411 0 01-.267-.114L8.82 12.514a.408.408 0 01-.076-.229v-.608c0-.076.038-.19.114-.267l2.016-2.016a.41.41 0 01.267-.114h.608a.41.41 0 01.267.114l2.016 2.016a.347.347 0 01.114.267v.608c-.076.077-.114.19-.19.229zm5.593 5.44l-4.832-2.777c-.266-.152-.57-.19-.837-.152-.723.038-1.332.684-1.332 1.408v5.554c0 .8.647 1.408 1.408 1.408.799 0 1.446-.647 1.446-1.408v-3.12l2.7 1.56c.686.38 1.561.152 1.941-.533.419-.646.19-1.521-.494-1.94zm2.549-7.533l-2.701 1.56 2.7 1.56c.686.38.914 1.256.533 1.94-.38.685-1.255.913-1.94.533l-4.832-2.778a1.644 1.644 0 01-.647-.798c-.037-.153-.076-.305-.076-.457 0-.114.039-.228.039-.342.114-.343.342-.647.646-.837l4.832-2.778c.685-.38 1.56-.152 1.94.533.457.609.19 1.484-.494 1.864"></path>
+              </svg>
+            </span>
+            Snowflake
+          </span>
+          <span
+            className="group/chip flex items-center gap-3 whitespace-nowrap rounded-[18px] border px-5 py-3.5 text-[15.5px] font-bold transition-[border-color,box-shadow] duration-300 border-line bg-white text-ink shadow-soft hover:border-brand/50 hover:shadow-lift"
+            style={{ "--brand-c": "#017CEE" }}
+          >
+            <span className="flex h-7 min-w-7 items-center justify-center">
+              <svg
+                viewBox="0 0 24 24"
+                role="img"
+                aria-label="Airflow"
+                className="aspect-square shrink-0 h-[26px] w-[28px] transition-[color,filter] duration-300 text-ink group-hover/chip:text-[var(--brand-c)] group-hover/chip:[filter:none]"
+                fill="currentColor"
+              >
+                <path d="M17.195 16.822l4.002-4.102C23.55 10.308 23.934 5.154 24 .43a.396.396 0 0 0-.246-.373.392.392 0 0 0-.437.09l-6.495 6.658-4.102-4.003C10.309.45 5.154.066.43 0H.423a.397.397 0 0 0-.277.683l6.658 6.494-4.003 4.103C.45 13.692.065 18.846 0 23.57a.398.398 0 0 0 .683.282l6.494-6.657 3.934 3.837.17.165c2.41 2.353 7.565 2.737 12.288 2.803h.006a.397.397 0 0 0 .277-.683l-6.657-6.495zm-.409-9.476c.04.115.05.24.031.344-.17.96-1.593 2.538-4.304 3.87a.597.597 0 0 0-.08-.079c1.432-3.155 1.828-5.61 1.175-7.322l3.058 2.984.12.203zm-.131 9.44a.73.73 0 0 1-.347.031c-.96-.171-2.537-1.594-3.87-4.307a.656.656 0 0 0 .08-.078l-.001.001c3.155 1.432 5.61 1.83 7.324 1.174l-2.969 3.043M23.568.392a.05.05 0 0 1 .052-.011c.018.006.03.024.029.043-.065 4.655-.437 9.726-2.703 12.05-1.53 1.565-4.326 1.419-8.283-.377.006-.037.021-.07.02-.108 0-.044-.017-.082-.026-.123 2.83-1.39 4.315-3.037 4.506-4.115.057-.322-.009-.542-.102-.688l6.507-6.67V.392zM.393.43A.045.045 0 0 1 .382.38C.39.36.403.343.425.35c4.655.065 9.727.438 12.05 2.703l.002.002c1.56 1.527 1.415 4.323-.379 8.28-.033-.005-.062-.02-.097-.02h-.008c-.045.001-.084.019-.126.027-1.39-2.83-3.037-4.314-4.115-4.506-.323-.057-.542.01-.688.103L.393.43zm11.94 11.563a.331.331 0 0 1-.327.335H12a.332.332 0 0 1-.004-.661c.172.016.333.144.335.326h.002zm-5.12 4.661a.722.722 0 0 1-.03-.345c.17-.96 1.595-2.54 4.309-3.873.013.016.019.035.033.05.013.012.03.017.044.028-1.434 3.158-1.83 5.613-1.177 7.326l-3.041-2.967m-.006-9.659a.735.735 0 0 1 .345-.031c.961.17 2.54 1.594 3.871 4.306a.597.597 0 0 0-.079.08c-2.167-.983-4.007-1.484-5.498-1.484-.68 0-1.289.103-1.825.308L7.128 7.35M.43 23.607c-.018.018-.038.015-.052.01-.019-.007-.028-.021-.028-.043.065-4.654.437-9.725 2.703-12.049 1.527-1.565 4.325-1.419 8.286.378-.006.035-.02.067-.02.104 0 .043.018.083.026.124-2.831 1.391-4.317 3.04-4.51 4.117-.057.322.01.542.103.688L.43 23.607zm23.144.042c-4.655-.065-9.726-.437-12.05-2.703l-.005-.006c-1.56-1.526-1.412-4.322.383-8.279.033.005.064.02.098.02h.009c.043 0 .08-.018.122-.027 1.39 2.832 3.036 4.317 4.115 4.51.083.014.16.021.23.021a.776.776 0 0 0 .45-.133l6.68 6.516c.02.02.016.04.01.052a.042.042 0 0 1-.042.029z"></path>
+              </svg>
+            </span>
+            Airflow
+          </span>
+          <span
+            className="group/chip flex items-center gap-3 whitespace-nowrap rounded-[18px] border px-5 py-3.5 text-[15.5px] font-bold transition-[border-color,box-shadow] duration-300 border-line bg-white text-ink shadow-soft hover:border-brand/50 hover:shadow-lift"
+            style={{ "--brand-c": "#0194E2" }}
+          >
+            <span className="flex h-7 min-w-7 items-center justify-center">
+              <svg
+                viewBox="0 0 24 24"
+                role="img"
+                aria-label="MLflow"
+                className="aspect-square shrink-0 h-[26px] w-[28px] transition-[color,filter] duration-300 text-ink group-hover/chip:text-[var(--brand-c)] group-hover/chip:[filter:none]"
+                fill="currentColor"
+              >
+                <path d="M11.883.002a12.044 12.044 0 0 0-9.326 19.463l3.668-2.694A7.573 7.573 0 0 1 12.043 4.45v2.867l6.908-5.14A12.012 12.012 0 0 0 11.883.002zm9.562 4.533L17.777 7.23a7.573 7.573 0 0 1-5.818 12.322v-2.867l-6.908 5.14a12.046 12.046 0 0 0 16.394-17.29z"></path>
+              </svg>
+            </span>
+            MLflow
+          </span>
+          <span
+            className="group/chip flex items-center gap-3 whitespace-nowrap rounded-[18px] border px-5 py-3.5 text-[15.5px] font-bold transition-[border-color,box-shadow] duration-300 border-line bg-white text-ink shadow-soft hover:border-brand/50 hover:shadow-lift"
+            style={{ "--brand-c": "#FFD21E" }}
+          >
+            <span className="flex h-7 min-w-7 items-center justify-center">
+              <svg
+                viewBox="0 0 24 24"
+                role="img"
+                aria-label="Hugging Face"
+                className="aspect-square shrink-0 h-[26px] w-[28px] transition-[color,filter] duration-300 text-ink group-hover/chip:text-[var(--brand-c)] group-hover/chip:[filter:none]"
+                fill="currentColor"
+              >
+                <path d="M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378 0 1.112.178 2.181.503 3.185.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284.278.173.48.408.71.694.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542.01.026.653 1.552 1.657 2.54.616.605 1.01 1.223 1.082 1.912.055.537-.096 1.059-.38 1.572.637.121 1.294.187 1.967.187.657 0 1.298-.063 1.921-.178-.287-.517-.44-1.041-.384-1.581.07-.69.465-1.307 1.081-1.913 1.004-.987 1.647-2.513 1.657-2.539.021-.074.083-.285.233-.542.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952.23-.286.432-.52.71-.694.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174 1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013 1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164 1.607-.007 2.984-1.155 3.572-1.164.196-.003.305.12.305.454 0 .886-.424 2.328-1.563 3.202-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026-.01.008-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116 1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243 1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444-.034-.016-.104-.008-.2.022q-.094.03-.216.087-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096 3 3 0 0 0-.26.219 2 2 0 0 0-.12.121 2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203 0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647 2.822 2.813 2.562 3.244-1.176-.506-1.176-.506-2.866-2.567-3.49-1.898.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405-.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194 1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647-2.822 2.813-2.562 3.244 1.176-.506 1.176-.506 2.866-2.567 3.49-1.898-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405.238.839 2.71-1.587 3.216-.642.506.946-3.49 2.056-3.522 2.064-1.29.33-4.568 1.028-5.713-.624"></path>
+              </svg>
+            </span>
+            Hugging Face
+          </span>
+          <span
+            className="group/chip flex items-center gap-3 whitespace-nowrap rounded-[18px] border px-5 py-3.5 text-[15.5px] font-bold transition-[border-color,box-shadow] duration-300 border-line bg-white text-ink shadow-soft hover:border-brand/50 hover:shadow-lift"
+            style={{ "--brand-c": "#4285F4" }}
+          >
+            <span className="flex h-7 min-w-7 items-center justify-center">
+              <svg
+                viewBox="0 0 24 24"
+                role="img"
+                aria-label="Google Cloud"
+                className="aspect-square shrink-0 h-[26px] w-[28px] transition-[color,filter] duration-300 text-ink group-hover/chip:text-[var(--brand-c)] group-hover/chip:[filter:none]"
+                fill="currentColor"
+              >
+                <path d="M12.19 2.38a9.344 9.344 0 0 0-9.234 6.893c.053-.02-.055.013 0 0-3.875 2.551-3.922 8.11-.247 10.941l.006-.007-.007.03a6.717 6.717 0 0 0 4.077 1.356h5.173l.03.03h5.192c6.687.053 9.376-8.605 3.835-12.35a9.365 9.365 0 0 0-2.821-4.552l-.043.043.006-.05A9.344 9.344 0 0 0 12.19 2.38zm-.358 4.146c1.244-.04 2.518.368 3.486 1.15a5.186 5.186 0 0 1 1.862 4.078v.518c3.53-.07 3.53 5.262 0 5.193h-5.193l-.008.009v-.04H6.785a2.59 2.59 0 0 1-1.067-.23h.001a2.597 2.597 0 1 1 3.437-3.437l3.013-3.012A6.747 6.747 0 0 0 8.11 8.24c.018-.01.04-.026.054-.023a5.186 5.186 0 0 1 3.67-1.69z"></path>
+              </svg>
+            </span>
+            Google Cloud
+          </span>
+        </div>
+      </div>
+    </section>
+  );
+}
