@@ -806,7 +806,9 @@ export default function LandingInteractions() {
     megaMenu?.addEventListener("focusin", updateServiceCategory);
     const setHeaderTone = () => {
       if (!header) return;
+      const heroIsDark = hero?.getAttribute("data-hero") === "dark";
       const dark =
+        heroIsDark &&
         window.scrollY < Math.max(100, (hero?.offsetHeight || 600) - 100);
       header.classList.toggle("bg-white/85", !dark);
       header.classList.toggle("backdrop-blur-xl", !dark);
