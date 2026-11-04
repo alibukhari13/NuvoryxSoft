@@ -1,11 +1,11 @@
 import Page from "@/components/templates/ArticlePage";
 const page = {
-  title: "Cloud cost benchmark: where engineering spend goes",
+  title: "Cloud cost benchmark report 2025",
   eyebrow: "NUVORYX RESEARCH",
-  date: "Jun 18, 2025",
-  readTime: "18 pages",
+  date: "Jul 10, 2025",
+  readTime: "28 pages",
   description:
-    "A practical benchmark for understanding cloud unit economics and optimisation opportunities.",
+    "Data from 180 cloud estates on where spend goes and how leaders cut it.",
   paragraphs: [
     "Cloud bills are easier to manage when teams can connect spend to products, workloads and customer value.",
     "This benchmark framework helps engineering leaders establish a baseline across compute, storage, networking and managed services, then compare unit costs by workload.",

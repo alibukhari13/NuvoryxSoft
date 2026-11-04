@@ -94,7 +94,35 @@ export default function Section01() {
               </span>
             </div>
             <h1 className="mt-5 text-[40px] sm:text-[56px] lg:text-[68px]">
-              Deliver Technology Roadmapping that moves your business forward.
+              <span className="word-mask">
+                <span style={{ animationDelay: "120ms" }}>A</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "175ms" }}>12–36</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "230ms" }}>month</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "285ms" }}>plan</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "340ms" }}>your</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "395ms" }}>board</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "450ms" }}>can</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "505ms" }}>fund</span>
+              </span>
+              <span className="text-brand">
+                <span className="word-mask">
+                  <span style={{ animationDelay: "560ms" }}>.</span>
+                </span>
+              </span>
             </h1>
             <p className="mt-6 max-w-2xl animate-fade-up text-[18px] [animation-delay:450ms] md:text-[19px] text-white/70">
               Our Technology Roadmapping practice combines senior specialists,

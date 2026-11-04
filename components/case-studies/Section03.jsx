@@ -111,7 +111,7 @@ export default function Section03() {
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="/agency-assets/e09d2c8848c480504502ae68e9358c5e71c4958671b5ed9faf375a22814175da.jpg"
+                    src="https://images.unsplash.com/photo-1681826291722-70bd7e9e6fc3?auto=format&fit=crop&w=1600&q=75"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent"></div>
                   <div className="absolute left-4 top-4 flex flex-wrap gap-2">
@@ -193,7 +193,7 @@ export default function Section03() {
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="/agency-assets/82af4cd5afbf2b0570b22b32617943dda126bf537cb0bb833b9542e38f374d4c.jpg"
+                    src="https://images.unsplash.com/photo-1758691462668-046fd85ceac9?auto=format&fit=crop&w=1600&q=75"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent"></div>
                   <div className="absolute left-4 top-4 flex flex-wrap gap-2">
@@ -276,7 +276,7 @@ export default function Section03() {
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="/agency-assets/ecfe6aa14456f0789202bd68d4397cf72b2230ac0f4a333ad322edd7369a9ebe.jpg"
+                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=75"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent"></div>
                   <div className="absolute left-4 top-4 flex flex-wrap gap-2">
@@ -357,7 +357,7 @@ export default function Section03() {
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="/agency-assets/0c3bcbccb17d595741213db218fbc2b996b1e82be400f873a50aa93010e1578c.jpg"
+                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=75"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent"></div>
                   <div className="absolute left-4 top-4 flex flex-wrap gap-2">
@@ -438,7 +438,7 @@ export default function Section03() {
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="/agency-assets/9c8de0c77c9da88f26e482a351c86908ec748448f3430f4505e83f50ed63891d.jpg"
+                    src="https://images.unsplash.com/photo-1677611998429-1baa4371456b?auto=format&fit=crop&w=1600&q=75"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent"></div>
                   <div className="absolute left-4 top-4 flex flex-wrap gap-2">
@@ -519,7 +519,7 @@ export default function Section03() {
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="/agency-assets/d36c96d79e27ede562756e165d11328cc0b9e496866d0afbe0dcd68b4093cf87.jpg"
+                    src="https://images.unsplash.com/photo-1690378820474-b468b8ee64d3?auto=format&fit=crop&w=1600&q=75"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent"></div>
                   <div className="absolute left-4 top-4 flex flex-wrap gap-2">
@@ -600,7 +600,7 @@ export default function Section03() {
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="/agency-assets/9c89204d1ae907e433c21cddb03392d9fd52d378359195073dc9bfc4e06e65a1.jpg"
+                    src="https://images.unsplash.com/photo-1716191299980-a6e8827ba10b?auto=format&fit=crop&w=1600&q=75"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent"></div>
                   <div className="absolute left-4 top-4 flex flex-wrap gap-2">
@@ -681,7 +681,7 @@ export default function Section03() {
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="/agency-assets/0161de819a6346ec080dc17f6361f37e1bbeae211aeca490ae42d5bacb46da0e.jpg"
+                    src="https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?auto=format&fit=crop&w=1600&q=75"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent"></div>
                   <div className="absolute left-4 top-4 flex flex-wrap gap-2">

@@ -31,7 +31,7 @@ export default function Section10() {
                   Software Testing &amp; Automation
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our software testing &amp; automation capabilities.
+                  Fast, stable suites that run on every commit.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -61,7 +61,7 @@ export default function Section10() {
                   Code Audit
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our code audit capabilities.
+                  An honest view of maintainability and risk.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -94,7 +94,7 @@ export default function Section10() {
                   Technical Debt Reduction
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our technical debt reduction capabilities.
+                  Pay down debt without pausing delivery.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">

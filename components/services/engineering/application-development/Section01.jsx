@@ -94,7 +94,32 @@ export default function Section01() {
               </span>
             </div>
             <h1 className="mt-5 text-[40px] sm:text-[56px] lg:text-[68px]">
-              Deliver Application Development that moves your business forward.
+              <span className="word-mask">
+                <span style={{ animationDelay: "120ms" }}>Scalable</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "175ms" }}>apps</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "230ms" }}>with</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "285ms" }}>secure</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "340ms" }}>integrations</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "395ms" }}>built</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "450ms" }}>in</span>
+              </span>
+              <span className="text-brand">
+                <span className="word-mask">
+                  <span style={{ animationDelay: "505ms" }}>.</span>
+                </span>
+              </span>
             </h1>
             <p className="mt-6 max-w-2xl animate-fade-up text-[18px] [animation-delay:450ms] md:text-[19px] text-white/70">
               Our Application Development practice combines senior specialists,

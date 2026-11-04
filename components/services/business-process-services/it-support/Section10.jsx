@@ -31,7 +31,7 @@ export default function Section10() {
                   Staff Augmentation / Dedicated Teams
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our staff augmentation / dedicated teams capabilities.
+                  Vetted engineers embedded in your team.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -64,7 +64,7 @@ export default function Section10() {
                   Offshore Development Center
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our offshore development center capabilities.
+                  Your own managed delivery hub, fully staffed.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -97,7 +97,7 @@ export default function Section10() {
                   Recruitment Support
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our recruitment support capabilities.
+                  Technical hiring with a sharper bar and faster pipeline.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">

@@ -31,7 +31,7 @@ export default function Section10() {
                   Web Development
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our web development capabilities.
+                  Fast, accessible sites built on modern stacks.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -64,7 +64,7 @@ export default function Section10() {
                   Mobile App Development
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our mobile app development capabilities.
+                  Native and cross-platform apps for iOS and Android.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -97,7 +97,7 @@ export default function Section10() {
                   CMS &amp; Headless
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our cms &amp; headless capabilities.
+                  Content platforms your marketers will actually enjoy.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">

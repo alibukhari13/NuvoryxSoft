@@ -24,10 +24,9 @@ export default function Section03() {
           <div className="reveal in" style={{ transitionDelay: "0ms" }}>
             <div className="relative rounded-[22px] border shadow-soft bg-white border-line transition-[transform,box-shadow,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:border-brand/60 hover:shadow-lift group h-full p-7">
               <span className="font-mono text-[12px] text-muted">01</span>
-              <h3 className="mt-3 text-[20px]">Product Strategy assessment</h3>
+              <h3 className="mt-3 text-[20px]">Assessment &amp; roadmap</h3>
               <p className="mt-2 text-[15px] text-muted">
-                A clear view of where Product Strategy adds the most value,
-                sequenced by impact and effort.
+                A clear view of where product strategy adds the most value, sequenced by impact and effort.
               </p>
               <div className="absolute bottom-0 left-7 right-7 h-[3px] origin-left scale-x-0 rounded-full bg-brand transition-transform duration-300 group-hover:scale-x-100"></div>
             </div>

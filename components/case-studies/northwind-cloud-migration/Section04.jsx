@@ -9,7 +9,7 @@ export default function Section04() {
         loading="lazy"
         decoding="async"
         className="h-full w-full object-cover absolute inset-0 opacity-25 transition-all duration-700 group-hover:scale-105 group-hover:opacity-35"
-        src="/agency-assets/82af4cd5afbf2b0570b22b32617943dda126bf537cb0bb833b9542e38f374d4c.jpg"
+        src="https://images.unsplash.com/photo-1758691462668-046fd85ceac9?auto=format&fit=crop&w=1600&q=75"
       />
       <div className="mx-auto w-full max-w-[1280px] px-5 md:px-8 relative flex flex-col gap-6 py-20 md:flex-row md:items-center md:justify-between">
         <div>

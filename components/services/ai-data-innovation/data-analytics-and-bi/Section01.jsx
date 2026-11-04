@@ -94,7 +94,29 @@ export default function Section01() {
               </span>
             </div>
             <h1 className="mt-5 text-[40px] sm:text-[56px] lg:text-[68px]">
-              Deliver Data Analytics &amp; BI that moves your business forward.
+              <span className="word-mask">
+                <span style={{ animationDelay: "120ms" }}>Self-serve</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "175ms" }}>dashboards</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "230ms" }}>your</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "285ms" }}>leadership</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "340ms" }}>will</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "395ms" }}>trust</span>
+              </span>
+              <span className="text-brand">
+                <span className="word-mask">
+                  <span style={{ animationDelay: "450ms" }}>.</span>
+                </span>
+              </span>
             </h1>
             <p className="mt-6 max-w-2xl animate-fade-up text-[18px] [animation-delay:450ms] md:text-[19px] text-white/70">
               Our Data Analytics &amp; BI practice combines senior specialists,

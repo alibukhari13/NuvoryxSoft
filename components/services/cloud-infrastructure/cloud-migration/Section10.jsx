@@ -31,7 +31,7 @@ export default function Section10() {
                   Cloud Strategy &amp; Architecture
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our cloud strategy &amp; architecture capabilities.
+                  Landing zones and reference architectures that scale.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -64,7 +64,7 @@ export default function Section10() {
                   DevOps &amp; CI/CD
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our devops &amp; ci/cd capabilities.
+                  Pipelines that ship safely, many times a day.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -97,7 +97,7 @@ export default function Section10() {
                   Managed Cloud Operations
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our managed cloud operations capabilities.
+                  24/7 operations backed by real SLAs.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">

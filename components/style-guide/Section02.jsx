@@ -1327,7 +1327,7 @@ export default function Section02() {
                     loading="lazy"
                     decoding="async"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="/agency-assets/e09d2c8848c480504502ae68e9358c5e71c4958671b5ed9faf375a22814175da.jpg"
+                    src="https://images.unsplash.com/photo-1681826291722-70bd7e9e6fc3?auto=format&fit=crop&w=1600&q=75"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent"></div>
                   <div className="absolute left-4 top-4 flex flex-wrap gap-2">

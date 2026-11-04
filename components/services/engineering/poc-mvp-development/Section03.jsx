@@ -28,8 +28,7 @@ export default function Section03() {
                 POC / MVP Development assessment
               </h3>
               <p className="mt-2 text-[15px] text-muted">
-                A clear view of where POC / MVP Development adds the most value,
-                sequenced by impact and effort.
+                A clear view of where poc / mvp development adds the most value, sequenced by impact and effort.
               </p>
               <div className="absolute bottom-0 left-7 right-7 h-[3px] origin-left scale-x-0 rounded-full bg-brand transition-transform duration-300 group-hover:scale-x-100"></div>
             </div>

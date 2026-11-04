@@ -1691,4 +1691,17 @@
 :root {
   --font-sans: "Nunito", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-display: "Helios Extended", "Syne", "Unbounded", sans-serif;
+}
+
+/* Tailwind's later base layer resets heading weight to inherit.
+   This utilities-layer rule restores Helios Extended 700, and a
+   font-bold or font-semibold class on a heading still wins. */
+@layer utilities {
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    line-height: 1.05;
+  }
 }

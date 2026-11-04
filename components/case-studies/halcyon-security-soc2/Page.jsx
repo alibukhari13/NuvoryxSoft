@@ -31,6 +31,8 @@ const page = {
     "The plan made security something our engineers could act on every sprint.",
   author: "Halcyon Security Team",
   role: "SaaS platform",
+  image:
+    "https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?auto=format&fit=crop&w=1600&q=75",
 };
 
 export default function casestudieshalcyonsecuritysoc2Page() {

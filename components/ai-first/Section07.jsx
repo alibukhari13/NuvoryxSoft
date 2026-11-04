@@ -32,7 +32,7 @@ export default function Section07() {
                   loading="lazy"
                   decoding="async"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  src="/agency-assets/e09d2c8848c480504502ae68e9358c5e71c4958671b5ed9faf375a22814175da.jpg"
+                  src="https://images.unsplash.com/photo-1681826291722-70bd7e9e6fc3?auto=format&fit=crop&w=1600&q=75"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent"></div>
                 <div className="absolute left-4 top-4 flex flex-wrap gap-2">
@@ -112,7 +112,7 @@ export default function Section07() {
                   loading="lazy"
                   decoding="async"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  src="/agency-assets/82af4cd5afbf2b0570b22b32617943dda126bf537cb0bb833b9542e38f374d4c.jpg"
+                  src="https://images.unsplash.com/photo-1758691462668-046fd85ceac9?auto=format&fit=crop&w=1600&q=75"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent"></div>
                 <div className="absolute left-4 top-4 flex flex-wrap gap-2">
@@ -193,7 +193,7 @@ export default function Section07() {
                   loading="lazy"
                   decoding="async"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  src="/agency-assets/9c8de0c77c9da88f26e482a351c86908ec748448f3430f4505e83f50ed63891d.jpg"
+                  src="https://images.unsplash.com/photo-1677611998429-1baa4371456b?auto=format&fit=crop&w=1600&q=75"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent"></div>
                 <div className="absolute left-4 top-4 flex flex-wrap gap-2">

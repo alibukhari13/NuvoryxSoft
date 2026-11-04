@@ -1,3 +1,5 @@
+import { ResourceSearch } from "@/components/resources/ResourceBrowser";
+
 export default function Section01() {
   return (
     <section
@@ -99,30 +101,7 @@ export default function Section01() {
           </div>
         </div>
         <div className="mt-10 max-w-2xl">
-          <div className="relative">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-search pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40"
-              aria-hidden="true"
-            >
-              <path d="m21 21-4.34-4.34"></path>
-              <circle cx="11" cy="11" r="8"></circle>
-            </svg>
-            <input
-              placeholder="Search 18 resources…"
-              aria-label="Search 18 resources…"
-              className="h-12 w-full rounded-full border border-line bg-white pl-11 pr-4 text-[15px] outline-none transition focus:border-forest focus:ring-4 focus:ring-brand/25"
-              defaultValue=""
-            />
-          </div>
+          <ResourceSearch />
         </div>
       </div>
     </section>

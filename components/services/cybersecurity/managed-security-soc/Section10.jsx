@@ -31,8 +31,7 @@ export default function Section10() {
                   Application Security &amp; Pen Testing
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our application security &amp; pen testing
-                  capabilities.
+                  Find exploitable flaws before attackers do.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -62,7 +61,7 @@ export default function Section10() {
                   Cloud Security
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our cloud security capabilities.
+                  Posture management across AWS, Azure and GCP.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -95,7 +94,7 @@ export default function Section10() {
                   Security Audits &amp; Compliance
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our security audits &amp; compliance capabilities.
+                  SOC 2, ISO 27001, HIPAA and PCI readiness.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">

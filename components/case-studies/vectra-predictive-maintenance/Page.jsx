@@ -31,6 +31,8 @@ const page = {
     "We can now plan around the signal instead of waiting for the next breakdown.",
   author: "Operations Director",
   role: "Vectra Manufacturing",
+  image:
+    "https://images.unsplash.com/photo-1716191299980-a6e8827ba10b?auto=format&fit=crop&w=1600&q=75",
 };
 
 export default function casestudiesvectrapredictivemaintenancePage() {

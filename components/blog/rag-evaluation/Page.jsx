@@ -1,11 +1,11 @@
 import Page from "@/components/templates/ArticlePage";
 const page = {
-  title: "RAG evaluation: measure retrieval quality before users do",
-  eyebrow: "AI & DATA",
-  date: "Aug 08, 2025",
-  readTime: "7 min read",
+  title: "Evaluating RAG systems: metrics that correlate with user trust",
+  eyebrow: "AI",
+  date: "Aug 21, 2025",
+  readTime: "10 min read",
   description:
-    "Build a repeatable evaluation loop for the quality, safety and freshness of RAG systems.",
+    "Faithfulness, groundedness and answer relevance, measured the right way.",
   paragraphs: [
     "Retrieval quality is often the hidden reason a RAG answer is incomplete. Evaluate the retrieved context separately from the final response so the team can see where errors begin.",
     "Create a representative set of questions with expected evidence. Measure whether the right sources appear near the top, whether answers cite those sources and whether the system correctly declines unsupported questions.",

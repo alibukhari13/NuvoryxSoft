@@ -106,7 +106,7 @@ export default function Section01() {
             data-parallax="0.08"
             data-parallax-scale="1.14"
             className="h-full w-full object-cover"
-            src="/agency-assets/e09d2c8848c480504502ae68e9358c5e71c4958671b5ed9faf375a22814175da.jpg"
+            src="https://images.unsplash.com/photo-1758691462668-046fd85ceac9?auto=format&fit=crop&w=1600&q=75"
             style={{ transform: "translate3d(0px, -65.4px, 0px) scale(1.14)" }}
           />
         </div>

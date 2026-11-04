@@ -31,7 +31,7 @@ export default function Section10() {
                   Digital Transformation Consulting
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our digital transformation consulting capabilities.
+                  Sequence change so value lands quarter by quarter.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -64,7 +64,7 @@ export default function Section10() {
                   Technology Roadmapping
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our technology roadmapping capabilities.
+                  A 12–36 month plan your board can fund.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -97,7 +97,7 @@ export default function Section10() {
                   Fractional CTO
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our fractional cto capabilities.
+                  Senior technical leadership, without the full-time hire.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">

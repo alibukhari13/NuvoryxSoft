@@ -32,6 +32,15 @@ export default function CaseStudyPage({ page }) {
               {page.summary}
             </p>
           </div>
+          {page.image ? (
+            <div className="mt-14 aspect-[21/9] overflow-hidden rounded-[28px]">
+              <img
+                alt={`${page.client} project`}
+                src={page.image}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          ) : null}
           <div className="mt-12 grid gap-4 sm:grid-cols-3">
             {page.metrics.map(([value, label]) => (
               <div

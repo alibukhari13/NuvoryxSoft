@@ -3,7 +3,7 @@ import Page from "@/pages/blog/pilot-to-production/page";
 
 export const metadata = {
   title:
-    "From pilot to production: an operating model for enterprise AI · Nuvoryx",
+    "How enterprises can move past the AI pilot phase · Nuvoryx",
 };
 
 export default function RoutePage() {

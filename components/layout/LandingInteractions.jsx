@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal, flushSync } from "react-dom";
 import { serviceCatalog } from "@/data/serviceCatalog.mjs";
 import { industryCatalog } from "@/data/industryCatalog.mjs";
+import ServicesMegaMenu from "@/components/layout/ServicesMegaMenu";
+import DropdownMenus from "@/components/layout/nav/DropdownMenus";
 
 const heroSlides = [
   {
@@ -335,19 +338,35 @@ function SearchDialog({ open, onClose }) {
   );
 }
 
+const COOKIE_CHOICE_KEY = "nuvoryx-cookie-choice";
+
+function storedCookieChoice() {
+  try {
+    const saved = window.localStorage.getItem(COOKIE_CHOICE_KEY);
+    if (saved) return saved;
+    const match = document.cookie.match(
+      new RegExp(`(?:^|; )${COOKIE_CHOICE_KEY}=([^;]*)`),
+    );
+    return match ? decodeURIComponent(match[1]) : "";
+  } catch {
+    return "";
+  }
+}
+
+function rememberCookieChoice(choice) {
+  try {
+    window.localStorage.setItem(COOKIE_CHOICE_KEY, choice);
+  } catch {}
+  document.cookie = `${COOKIE_CHOICE_KEY}=${encodeURIComponent(choice)}; Max-Age=31536000; Path=/; SameSite=Lax`;
+}
+
 function CookieNotice({ onClose }) {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   useEffect(() => {
-    try {
-      setVisible(!window.localStorage?.getItem("nuvoryx-cookie-choice"));
-    } catch {
-      setVisible(true);
-    }
+    setVisible(!storedCookieChoice());
   }, []);
   const choose = (choice) => {
-    try {
-      window.localStorage?.setItem("nuvoryx-cookie-choice", choice);
-    } catch {}
+    rememberCookieChoice(choice);
     setVisible(false);
     onClose?.();
   };
@@ -355,7 +374,7 @@ function CookieNotice({ onClose }) {
   return (
     <aside
       aria-label="Cookie preferences"
-      className="fixed bottom-5 left-5 z-[60] w-[min(420px,calc(100vw-110px))] animate-fade-up rounded-[22px] border border-line bg-white p-5 text-ink shadow-lift"
+      className="fixed bottom-32 left-4 right-4 z-[60] w-auto animate-fade-up rounded-[22px] border border-line bg-white p-5 text-ink shadow-lift sm:bottom-5 sm:left-5 sm:right-auto sm:w-[min(420px,calc(100vw-40px))]"
     >
       <div className="flex items-start gap-3">
         <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand/15 text-forest">
@@ -389,18 +408,40 @@ function CookieNotice({ onClose }) {
           </p>
         </div>
       </div>
-      <div className="mt-4 flex flex-col gap-2 sm:flex-row">
+      <div className="mt-4 flex flex-col gap-2 min-[420px]:flex-row">
         <button
           onClick={() => choose("all")}
-          className="h-10 flex-1 rounded-full bg-ink px-5 text-[13px] font-bold text-white transition-all hover:bg-forest"
+          className="group/btn relative isolate inline-flex h-10 w-full shrink-0 items-center gap-3 overflow-hidden rounded-full bg-ink pl-5 pr-1 font-display text-[13px] font-semibold tracking-[-0.01em] whitespace-nowrap text-white shadow-[0_12px_30px_-16px_rgba(17,17,17,0.6)] transition-[transform,box-shadow,border-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] select-none active:scale-[0.97] min-[420px]:w-auto min-[420px]:flex-1"
         >
-          Accept all
+          <span
+            aria-hidden="true"
+            className="absolute top-1 right-1 bottom-1 -z-10 aspect-square scale-100 rounded-full bg-brand transition-transform duration-[650ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:scale-[26]"
+          />
+          <span className="relative mr-auto inline-flex items-center gap-2 transition-colors duration-300 group-hover/btn:text-ink">
+            Accept all
+          </span>
+          <span className="relative grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded-full bg-brand text-ink">
+            <svg viewBox="0 0 24 24" className="absolute h-3.5 w-3.5 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:translate-x-[220%]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+            <svg viewBox="0 0 24 24" className="absolute h-3.5 w-3.5 -translate-x-[220%] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:translate-x-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </span>
         </button>
         <button
           onClick={() => choose("essential")}
-          className="h-10 flex-1 rounded-full border border-line px-5 text-[13px] font-bold transition-all hover:border-ink hover:bg-paper"
+          className="group/btn relative isolate inline-flex h-10 w-full shrink-0 items-center justify-center overflow-hidden rounded-full border-[1.5px] border-ink/20 px-5 font-display text-[13px] font-semibold tracking-[-0.01em] whitespace-nowrap text-ink transition-[transform,box-shadow,border-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] select-none hover:border-ink active:scale-[0.97] min-[420px]:w-auto min-[420px]:flex-1"
         >
-          Essential only
+          <span
+            aria-hidden="true"
+            className="absolute top-1 right-1 bottom-1 -z-10 aspect-square scale-0 rounded-full bg-ink transition-transform duration-[650ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/btn:scale-[26]"
+          />
+          <span className="relative transition-colors duration-300 group-hover/btn:text-white">
+            Essential only
+          </span>
         </button>
       </div>
     </aside>
@@ -488,6 +529,9 @@ function ChatPanel({ onClose }) {
 export default function LandingInteractions() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
+  const [servicesHost, setServicesHost] = useState(null);
+  const [menuHost, setMenuHost] = useState(null);
+  const [menuGroup, setMenuGroup] = useState(null);
   const setChatVisibility = (open) => {
     setChatOpen(open);
     const trigger = document.querySelector("[data-chat-trigger]");
@@ -661,11 +705,14 @@ export default function LandingInteractions() {
         "Our Partners / Alliances":
           "Microsoft, AWS, Google Cloud, OpenAI and more",
         "ESG & Culture": "How we care for people and planet",
-        Webinars: "Led by Nuvoryx’s research and advisory experts",
+        Webinars: "Led by Nuvoryx's research & advisory experts",
         "White papers & Ebooks": "Research-backed guidance on emerging tech",
         Podcasts: "Tech-driven dialogues with industry experts",
         Blogs: "Expert-driven articles on engineering and AI",
-        Newsroom: "Updates on Nuvoryx and global tech insights",
+        Newsroom:
+          group === "Company"
+            ? "Announcements and press coverage"
+            : "Updates on Nuvoryx and global tech insights",
         "Resource Center": "A collection of every Nuvoryx resource",
       };
       const links = menuData[group]
@@ -674,14 +721,16 @@ export default function LandingInteractions() {
           const badge =
             group === "Resources" && label === "Webinars"
               ? '<span class="rounded-full bg-[#FFF2D8] px-2 py-0.5 text-[10px] font-bold text-[#9A6200]">Popular</span>'
-              : "";
+              : group === "Company" && label === "AI-First Company"
+                ? '<span class="rounded-full bg-brand/15 px-2 py-0.5 text-[10px] font-bold text-forest">New</span>'
+                : "";
           return `<a href="${linkForMenu(group, label)}" class="group flex gap-3 rounded-2xl p-3 transition-colors hover:bg-paper"><span class="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-[2px] bg-ink/30 transition-colors group-hover:bg-brand"></span><span><span class="flex items-center gap-2 text-[15px] font-bold text-ink group-hover:text-forest">${label}${badge}</span><span class="mt-0.5 block text-[13.5px] leading-snug text-muted">${descriptions[label] || "Explore how Nuvoryx can help."}</span></span></a>`;
         })
         .join("");
       const columns = group === "Customers" ? "grid-cols-3" : "grid-cols-2";
       const feature =
         group === "Customers"
-          ? `<div class="bg-paper p-8"><div class="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">Featured story</div><a href="/case-studies/medacore-clinical-copilot" class="group mt-4 flex gap-4"><img src="https://images.unsplash.com/photo-1758691463203-cce9d415b2b5?auto=format&fit=crop&w=600&q=75" alt="" class="h-24 w-36 shrink-0 rounded-xl object-cover transition-transform group-hover:scale-105"/><span><span class="font-display text-[15px] font-bold leading-tight">A clinical copilot that gives physicians 9 hours back every week</span><span class="mt-2 block text-[13px] font-bold text-muted group-hover:text-forest">Read the story →</span></span></a></div>`
+          ? `<div class="bg-paper p-8"><div class="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">Featured story</div><a href="/case-studies/medacore-clinical-copilot" class="group mt-4 flex gap-4"><img src="https://images.unsplash.com/photo-1758691462668-046fd85ceac9?auto=format&fit=crop&w=1600&q=75" alt="" class="h-24 w-36 shrink-0 rounded-xl object-cover transition-transform group-hover:scale-105"/><span><span class="font-display text-[15px] font-bold leading-tight">A clinical copilot that gives physicians 9 hours back every week</span><span class="mt-2 block text-[13px] font-bold text-muted group-hover:text-forest">Read the story →</span></span></a></div>`
           : group === "Company"
             ? `<div class="bg-paper p-8"><div class="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">Featured</div><div class="mt-4 flex flex-col gap-3"><a href="/newsroom/anthropic-partner-network" class="group flex items-center gap-4 rounded-2xl p-2 transition-colors hover:bg-white"><span class="relative grid h-[92px] w-[136px] shrink-0 place-items-center overflow-hidden rounded-xl bg-[radial-gradient(circle_at_80%_20%,rgba(5,207,69,0.5),transparent_60%),#1B3329]"><span class="rounded-md bg-white px-2.5 py-1.5 text-[12px] font-bold text-ink">Claude</span></span><span><span class="block font-display text-[15px] font-bold leading-tight tracking-[-0.02em] text-ink">Nuvoryx joins Anthropic’s Claude Partner Network</span><span class="mt-2 block text-[13px] font-bold text-muted group-hover:text-forest">Read the news <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span></span></span></a><a href="/newsroom/openai-select-partner" class="group flex items-center gap-4 rounded-2xl p-2 transition-colors hover:bg-white"><span class="relative grid h-[92px] w-[136px] shrink-0 place-items-center overflow-hidden rounded-xl bg-[radial-gradient(circle_at_20%_80%,rgba(5,207,69,0.5),transparent_60%),#1B3329]"><span class="rounded-md bg-white px-2.5 py-1.5 text-[12px] font-bold text-ink">OpenAI</span></span><span><span class="block font-display text-[15px] font-bold leading-tight tracking-[-0.02em] text-ink">Nuvoryx named an OpenAI Select Partner</span><span class="mt-2 block text-[13px] font-bold text-muted group-hover:text-forest">Read the news <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span></span></span></a></div></div>`
             : `<div class="bg-paper p-8"><div class="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">Featured</div><a href="/whitepapers/ai-adoption-2026" class="group mt-4 block"><div class="grid aspect-[16/9] place-items-center overflow-hidden rounded-[18px] bg-[radial-gradient(circle_at_50%_40%,rgba(5,207,69,0.35),#1B3329_70%)]"><div class="relative aspect-[3/4] w-32 overflow-hidden rounded-[10px] bg-white p-5 shadow-lift transition-transform duration-500 group-hover:-rotate-2 group-hover:scale-105"><div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-brand/60 blur-2xl"></div><svg viewBox="0 0 200 200" class="absolute -right-6 top-6 h-32 w-32" aria-hidden="true"><defs><radialGradient id="resource-cover-mark" cx="35%" cy="30%" r="80%"><stop offset="0%" stop-color="#C8FFD8"/><stop offset="40%" stop-color="#05CF45"/><stop offset="100%" stop-color="#1B3329"/></radialGradient><filter id="resource-cover-mark-blur"><feGaussianBlur stdDeviation="8"/></filter></defs><path d="M100 10 C108 70 130 92 190 100 C130 108 108 130 100 190 C92 130 70 108 10 100 C70 92 92 70 100 10Z" fill="#05CF45" opacity="0.35" filter="url(#resource-cover-mark-blur)" transform="translate(0 10)"/><path d="M100 10 C108 70 130 92 190 100 C130 108 108 130 100 190 C92 130 70 108 10 100 C70 92 92 70 100 10Z" fill="url(#resource-cover-mark)"/></svg><div class="relative flex h-full flex-col"><div class="flex items-center gap-1.5 font-display text-[11px] font-extrabold tracking-tight text-ink"><svg viewBox="0 0 32 32" class="h-4 w-4" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#05CF45"/><path d="M9 23V9l14 14V9" fill="none" stroke="#111" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>nuvoryx</div><div class="relative mt-auto"><span class="rounded bg-brand/15 px-1.5 py-0.5 font-mono text-[8px] uppercase tracking-widest text-forest">White paper</span><div class="mt-2 font-display text-[14px] font-bold leading-tight text-ink">AI Adoption in 2026</div></div></div></div></div><span class="mt-4 block font-display text-[16px] font-bold leading-snug tracking-[-0.02em]">AI adoption in 2026: a practical framework for enterprise-scale impact</span><span class="mt-2 flex items-center gap-1 text-[13.5px] font-bold text-muted transition-colors group-hover:text-forest">Get the white paper <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span></span></a></div>`;
@@ -693,10 +742,37 @@ export default function LandingInteractions() {
     };
     const renderMenu = (group) => {
       if (!megaContent) return;
-      if (group === "Industries") megaContent.innerHTML = originalIndustryMenu;
-      else if (group === "Services")
-        megaContent.innerHTML = serviceMenuMarkup("Engineering");
-      else megaContent.innerHTML = simpleMenuMarkup(group);
+      if (group === "Services") {
+        flushSync(() => {
+          setMenuHost(null);
+          setMenuGroup(null);
+        });
+        if (!megaContent.querySelector("[data-services-root]")) {
+          flushSync(() => setServicesHost(null));
+          megaContent.innerHTML = '<div data-services-root="true"></div>';
+        }
+        const slot = megaContent.querySelector("[data-services-root]");
+        flushSync(() => setServicesHost(slot));
+        return;
+      }
+      flushSync(() => setServicesHost(null));
+      if (group === "Industries") {
+        flushSync(() => {
+          setMenuHost(null);
+          setMenuGroup(null);
+        });
+        megaContent.innerHTML = originalIndustryMenu;
+        return;
+      }
+      if (!megaContent.querySelector("[data-menu-root]")) {
+        flushSync(() => setMenuHost(null));
+        megaContent.innerHTML = '<div data-menu-root="true"></div>';
+      }
+      const slot = megaContent.querySelector("[data-menu-root]");
+      flushSync(() => {
+        setMenuHost(slot);
+        setMenuGroup(group);
+      });
     };
     const showMegaMenu = (button) => {
       if (!header || !megaMenu || !button) return;
@@ -776,6 +852,7 @@ export default function LandingInteractions() {
     const onRouteChange = () => hideMegaMenu();
     window.addEventListener("hashchange", onRouteChange);
     const updateServiceCategory = (event) => {
+      if (megaContent?.querySelector("[data-services-root]")) return;
       const target = event.target instanceof Element ? event.target : null;
       const link = target?.closest("[data-service-category]");
       if (!link || !megaContent?.contains(link)) return;
@@ -807,8 +884,12 @@ export default function LandingInteractions() {
     const setHeaderTone = () => {
       if (!header) return;
       const heroIsDark = hero?.getAttribute("data-hero") === "dark";
+      const menuOpen = !!header.querySelector(
+        'nav > div > button[aria-expanded="true"]',
+      );
       const dark =
         heroIsDark &&
+        !menuOpen &&
         window.scrollY < Math.max(100, (hero?.offsetHeight || 600) - 100);
       header.classList.toggle("bg-white/85", !dark);
       header.classList.toggle("backdrop-blur-xl", !dark);
@@ -1007,21 +1088,37 @@ export default function LandingInteractions() {
         );
         return;
       }
-      const faqButton = target.closest("[aria-expanded]");
+      const faqButton = target.closest("button[aria-expanded]");
+      const faqPanel = faqButton?.nextElementSibling;
       if (
         faqButton &&
-        faqButton
-          .closest("section")
-          ?.querySelector("h2")
-          ?.textContent.includes("Questions, answered")
+        !faqButton.hasAttribute("data-mobile-accordion") &&
+        faqPanel instanceof HTMLElement &&
+        [...faqPanel.classList].some((name) => name.startsWith("grid-rows-"))
       ) {
-        const expanded = faqButton.getAttribute("aria-expanded") === "true";
-        faqButton.setAttribute("aria-expanded", String(!expanded));
-        const answer = faqButton.nextElementSibling;
-        if (answer) {
-          answer.hidden = expanded;
-          answer.classList.toggle("hidden", expanded);
-        }
+        const nextOpen = faqButton.getAttribute("aria-expanded") !== "true";
+        const column = faqButton.parentElement?.parentElement;
+        const buttons = column
+          ? [...column.querySelectorAll(":scope > div > button[aria-expanded]")]
+          : [faqButton];
+        (buttons.length ? buttons : [faqButton]).forEach((button) => {
+          const open = button === faqButton && nextOpen;
+          button.setAttribute("aria-expanded", String(open));
+          const card = button.parentElement;
+          const panel = button.nextElementSibling;
+          const icon = button.querySelector("span.grid");
+          card?.classList.toggle("border-forest/25", open);
+          if (panel instanceof HTMLElement) {
+            panel.hidden = false;
+            panel.classList.remove("hidden");
+            panel.classList.toggle("grid-rows-[1fr]", open);
+            panel.classList.toggle("grid-rows-[0fr]", !open);
+          }
+          icon?.classList.toggle("rotate-45", open);
+          icon?.classList.toggle("bg-brand", open);
+          icon?.classList.toggle("text-ink", open);
+          icon?.classList.toggle("bg-ink/5", !open);
+        });
         return;
       }
       const menuButton = target.closest(
@@ -1076,6 +1173,7 @@ export default function LandingInteractions() {
       const mobileToggle = target.closest(
         ".fixed.inset-0.z-\\[70\\] button[aria-expanded]",
       );
+      if (mobileToggle?.hasAttribute("data-mobile-accordion")) return;
       if (mobileToggle) {
         const expanded = mobileToggle.getAttribute("aria-expanded") === "true";
         const groupButtons = [
@@ -1388,6 +1486,9 @@ export default function LandingInteractions() {
       <SearchDialog open={searchOpen} onClose={() => setSearchOpen(false)} />
       <CookieNotice />
       {chatOpen && <ChatPanel onClose={() => setChatVisibility(false)} />}
+      {servicesHost && createPortal(<ServicesMegaMenu />, servicesHost)}
+      {menuHost &&
+        createPortal(<DropdownMenus group={menuGroup} />, menuHost)}
     </>
   );
 }

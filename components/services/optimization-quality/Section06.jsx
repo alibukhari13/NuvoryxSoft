@@ -59,7 +59,7 @@ export default function Section06() {
               loading="lazy"
               decoding="async"
               className="h-full w-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105"
-              src="/agency-assets/9c8de0c77c9da88f26e482a351c86908ec748448f3430f4505e83f50ed63891d.jpg"
+              src="https://images.unsplash.com/photo-1677611998429-1baa4371456b?auto=format&fit=crop&w=1600&q=75"
             />
           </div>
           <div className="p-8 md:p-12">

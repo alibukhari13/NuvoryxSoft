@@ -1,11 +1,11 @@
 import Page from "@/components/templates/ArticlePage";
 const page = {
-  title: "From pilot to production: an operating model for enterprise AI",
-  eyebrow: "AI & DATA",
-  date: "Aug 26, 2025",
-  readTime: "10 min read",
+  title: "How enterprises can move past the AI pilot phase",
+  eyebrow: "STRATEGY",
+  date: "Oct 14, 2025",
+  readTime: "7 min read",
   description:
-    "Move promising AI experiments into secure, measurable products teams can run.",
+    "Most AI pilots stall for organisational reasons, not technical ones. Here is how to unstick them.",
   paragraphs: [
     "A promising pilot needs a product owner, a real user workflow and a production environment before it can create durable value.",
     "Treat data access, privacy, evaluation and support as first-class design work. Agree how people will review outputs and what the system should do when it is uncertain.",

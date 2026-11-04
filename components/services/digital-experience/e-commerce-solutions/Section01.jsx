@@ -94,7 +94,26 @@ export default function Section01() {
               </span>
             </div>
             <h1 className="mt-5 text-[40px] sm:text-[56px] lg:text-[68px]">
-              Deliver E-commerce Solutions that moves your business forward.
+              <span className="word-mask">
+                <span style={{ animationDelay: "120ms" }}>Storefronts</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "175ms" }}>and</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "230ms" }}>checkouts</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "285ms" }}>that</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "340ms" }}>convert</span>
+              </span>
+              <span className="text-brand">
+                <span className="word-mask">
+                  <span style={{ animationDelay: "395ms" }}>.</span>
+                </span>
+              </span>
             </h1>
             <p className="mt-6 max-w-2xl animate-fade-up text-[18px] [animation-delay:450ms] md:text-[19px] text-white/70">
               Our E-commerce Solutions practice combines senior specialists,

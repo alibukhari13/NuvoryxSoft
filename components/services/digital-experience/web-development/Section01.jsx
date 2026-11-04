@@ -94,12 +94,35 @@ export default function Section01() {
               </span>
             </div>
             <h1 className="mt-5 text-[40px] sm:text-[56px] lg:text-[68px]">
-              Deliver Web Development that moves your business forward.
+              <span className="word-mask">
+                <span style={{ animationDelay: "120ms" }}>Fast,</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "175ms" }}>accessible</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "230ms" }}>sites</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "285ms" }}>built</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "340ms" }}>on</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "395ms" }}>modern</span>
+              </span>{" "}
+              <span className="word-mask">
+                <span style={{ animationDelay: "450ms" }}>stacks</span>
+              </span>
+              <span className="text-brand">
+                <span className="word-mask">
+                  <span style={{ animationDelay: "505ms" }}>.</span>
+                </span>
+              </span>
             </h1>
             <p className="mt-6 max-w-2xl animate-fade-up text-[18px] [animation-delay:450ms] md:text-[19px] text-white/70">
-              Our Web Development practice combines senior specialists, proven
-              accelerators and an outcome-first approach. Every engagement is
-              shaped around your goals, constraints and measures of success.
+              Our Web Development practice combines senior engineers, proven accelerators and an outcome-first approach. Typical engagements show measurable results within the first 90 days.
             </p>
             <div className="mt-9 flex animate-fade-up flex-wrap gap-3 [animation-delay:600ms]">
               <a

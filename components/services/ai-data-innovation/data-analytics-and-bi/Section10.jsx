@@ -31,7 +31,7 @@ export default function Section10() {
                   AI Strategy &amp; Roadmap
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our ai strategy &amp; roadmap capabilities.
+                  Prioritise use cases by value, feasibility and risk.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -64,7 +64,7 @@ export default function Section10() {
                   Generative AI &amp; LLM Solutions
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our generative ai &amp; llm solutions capabilities.
+                  Ship copilots and RAG systems grounded in your data.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -97,7 +97,7 @@ export default function Section10() {
                   AI Agents &amp; Workflow Automation
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our ai agents &amp; workflow automation capabilities.
+                  Autonomous agents that complete real, multi-step work.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">

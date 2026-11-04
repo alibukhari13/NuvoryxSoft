@@ -2,7 +2,7 @@ import PageShell from "@/components/layout/PageShell";
 import Page from "@/pages/blog/legacy-modernization-patterns/page";
 
 export const metadata = {
-  title: "Legacy modernization patterns that keep delivery moving · Nuvoryx",
+  title: "Strangler, rehost or rebuild? Choosing your modernization pattern · Nuvoryx",
 };
 
 export default function RoutePage() {

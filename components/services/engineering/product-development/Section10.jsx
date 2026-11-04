@@ -28,7 +28,7 @@ export default function Section10() {
                   UX/UI Design
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our ux/ui design capabilities.
+                  Design experiences that cut friction and lift conversion.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -61,7 +61,7 @@ export default function Section10() {
                   Application Modernization
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our application modernization capabilities.
+                  Move legacy apps to cloud-native, AI-ready foundations.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
@@ -94,8 +94,7 @@ export default function Section10() {
                   Quality Assurance &amp; Continuous Delivery
                 </div>
                 <div className="mt-1 text-[14px] text-muted">
-                  Explore our quality assurance &amp; continuous delivery
-                  capabilities.
+                  Automated tests and CI/CD that make releases boring.
                 </div>
               </div>
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full transition-all duration-300 group-hover:rotate-45 group-hover:bg-brand group-hover:text-ink bg-ink text-white">
