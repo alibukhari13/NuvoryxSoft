@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { createPortal, flushSync } from "react-dom";
 import { serviceCatalog } from "@/data/serviceCatalog.mjs";
 import { industryCatalog } from "@/data/industryCatalog.mjs";
@@ -120,6 +121,88 @@ const linkForMenu = (group, title) => {
   if (group === "Resources") return `/${slug}`;
   return "/";
 };
+
+const selectedServiceTabClass =
+  "relative h-10 shrink-0 rounded-full px-4 text-[14px] font-bold transition-colors duration-300 text-white border border-transparent bg-transparent";
+const idleServiceTabClass =
+  "relative h-10 shrink-0 rounded-full px-4 text-[14px] font-bold transition-colors duration-300 border border-line bg-white text-ink/75 hover:border-ink/30";
+
+function bindServiceCategoryFilter() {
+  const cleanups = [];
+  document.querySelectorAll('[role="tablist"]').forEach((list) => {
+    const tabs = [...list.querySelectorAll(':scope > [role="tab"]')];
+    const labels = tabs.map((tab) => tab.textContent.trim());
+    if (!labels.includes("All") || !labels.includes("Engineering")) return;
+    const grid = list.parentElement?.nextElementSibling;
+    if (!(grid instanceof HTMLElement)) return;
+    const cards = [...grid.children].filter((card) => card.querySelector("h2"));
+    if (cards.length < 2) return;
+    const pill = list.querySelector(':scope > span[aria-hidden="true"]');
+
+    const syncPill = () => {
+      const active =
+        tabs.find((tab) => tab.getAttribute("aria-selected") === "true") ||
+        tabs[0];
+      if (!pill || !active || active.offsetWidth === 0) return;
+      pill.style.transform = `translateX(${active.offsetLeft}px)`;
+      pill.style.width = `${active.offsetWidth}px`;
+    };
+
+    const apply = (label) => {
+      tabs.forEach((tab) => {
+        const selected = tab.textContent.trim() === label;
+        tab.setAttribute("aria-selected", selected ? "true" : "false");
+        tab.className = selected ? selectedServiceTabClass : idleServiceTabClass;
+      });
+      const visible = [];
+      cards.forEach((card) => {
+        const title = card
+          .querySelector("h2")
+          ?.textContent.replace(/\s+/g, " ")
+          .trim();
+        const show = label === "All" || title === label;
+        card.hidden = !show;
+        if (show) visible.push(card);
+      });
+      visible.forEach((card, index) => {
+        card.querySelector("div.bg-forest")?.classList.toggle(
+          "lg:order-2",
+          index % 2 === 1,
+        );
+      });
+      syncPill();
+    };
+
+    const onClick = (event) => {
+      const tab =
+        event.target instanceof Element
+          ? event.target.closest('[role="tab"]')
+          : null;
+      if (!tab || !list.contains(tab)) return;
+      apply(tab.textContent.trim());
+      const targetLeft =
+        tab.offsetLeft - list.clientWidth / 2 + tab.offsetWidth / 2;
+      list.scrollTo({ left: Math.max(0, targetLeft), behavior: "smooth" });
+    };
+
+    list.addEventListener("click", onClick);
+    const resizeObserver = new ResizeObserver(() => syncPill());
+    tabs.forEach((tab) => resizeObserver.observe(tab));
+    document.fonts?.ready.then(() => syncPill());
+    apply(
+      tabs.find((tab) => tab.getAttribute("aria-selected") === "true")
+        ?.textContent.trim() || "All",
+    );
+    cleanups.push(() => {
+      list.removeEventListener("click", onClick);
+      resizeObserver.disconnect();
+      cards.forEach((card) => {
+        card.hidden = false;
+      });
+    });
+  });
+  return () => cleanups.forEach((cleanup) => cleanup());
+}
 
 function SearchDialog({ open, onClose }) {
   const [query, setQuery] = useState("");
@@ -527,6 +610,7 @@ function ChatPanel({ onClose }) {
 }
 
 export default function LandingInteractions() {
+  const pathname = usePathname();
   const [searchOpen, setSearchOpen] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
   const [servicesHost, setServicesHost] = useState(null);
@@ -544,6 +628,18 @@ export default function LandingInteractions() {
   };
 
   useEffect(() => {
+    if (pathname !== "/services") return undefined;
+    return bindServiceCategoryFilter();
+  }, [pathname]);
+
+  useEffect(() => {
+    const page = document.querySelector(".animate-page");
+    const releasePageTransform = () => {
+      if (page) page.style.animation = "none";
+    };
+    page?.addEventListener("animationend", releasePageTransform);
+    const pageTimer = window.setTimeout(releasePageTransform, 700);
+
     const sectionsWithoutReveal = [
       ...document.querySelectorAll("main section"),
     ].filter((section) => !section.querySelector(".reveal"));
@@ -946,6 +1042,14 @@ export default function LandingInteractions() {
       ) {
         header.classList.remove("-translate-y-full");
         header.classList.add("translate-y-0");
+      }
+      const serviceBar = document
+        .querySelector('[role="tablist"]')
+        ?.parentElement;
+      if (serviceBar?.classList.contains("sticky")) {
+        serviceBar.style.top = header?.classList.contains("-translate-y-full")
+          ? "0px"
+          : "72px";
       }
       previousScrollY = currentScrollY;
     };
@@ -1448,6 +1552,8 @@ export default function LandingInteractions() {
     document.addEventListener("change", onInput);
     document.addEventListener("keydown", onKey);
     return () => {
+      window.clearTimeout(pageTimer);
+      page?.removeEventListener("animationend", releasePageTransform);
       clearTimeout(heroTimer);
       counterObserver.disconnect();
       revealObserver.disconnect();
